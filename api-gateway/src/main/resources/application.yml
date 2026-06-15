@@ -1,0 +1,68 @@
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: "optional:configserver:http://localhost:8088"
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: ms-accesorios
+              uri: lb://ms-accesorios
+              predicates:
+                - Path=/api/accesorios/**
+            - id: ms-categorias
+              uri: lb://ms-categorias
+              predicates:
+                - Path=/api/categorias/**
+            - id: ms-clientes
+              uri: lb://ms-clientes
+              predicates:
+                - Path=/api/clientes/**
+            - id: ms-estado
+              uri: lb://ms-estado
+              predicates:
+                - Path=/api/estado/**
+            - id: ms-herramientas
+              uri: lb://ms-herramientas
+              predicates:
+                - Path=/api/herramientas/**
+            - id: ms-melamine
+              uri: lb://ms-melamine
+              predicates:
+                - Path=/api/melamine/**
+            - id: ms-proveedores
+              uri: lb://ms-proveedores
+              predicates:
+                - Path=/api/proveedores/**
+            - id: ms-proyectos
+              uri: lb://ms-proyectos
+              predicates:
+                - Path=/api/proyectos/**
+            - id: ms-gestion-alumno
+              uri: lb://ms-gestion-alumno
+              predicates:
+                - Path=/api/alumnos/**
+            - id: ms-gestion-instructor
+              uri: lb://ms-gestion-instructor
+              predicates:
+                - Path=/api/instructores/**
+            - id: ms-gestion-taller
+              uri: lb://ms-gestion-taller
+              predicates:
+                - Path=/api/talleres/**
+            - id: auth-service
+              uri: lb://auth-service
+              predicates:
+                - Path=/auth/**
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

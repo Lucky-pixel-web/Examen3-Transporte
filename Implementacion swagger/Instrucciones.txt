@@ -1,0 +1,7 @@
+- Al igual que el postman puede probar y verificar mediante estos 3 enlances
+
+1. http://localhost:8081/swagger-ui/index.html#/
+2. http://localhost:8082/swagger-ui/index.html
+3. http://localhost:8083/swagger-ui/index.html#/
+
+(Recuerda iniciar por el Registrer y Login Admin con la creación del usuario Admin y poniendo los tokens en la parte de autorizacion para probar el CRUD del postman para realizar cada función de los microservicios, de lo contrario no servirá)

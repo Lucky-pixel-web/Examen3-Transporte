@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="config-server" />
+        <module name="service-registry" />
+      </profile>
+      <profile name="Annotation profile for auth-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="auth-service" />
+      </profile>
+      <profile name="Annotation profile for ms-gestion-alumno" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="ms-gestion-alumno" />
+        <module name="ms-gestion-instructor" />
+        <module name="ms-gestion-taller" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ms-estado" target="21" />
+      <module name="ms-herramientas" target="21" />
+      <module name="ms-melamine" target="21" />
+      <module name="ms-ordenes" target="21" />
+      <module name="ms-proveedores" target="21" />
+      <module name="ms-proyectos" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="ms-estado" options="-parameters" />
+      <module name="ms-gestion-alumno" options="-parameters" />
+      <module name="ms-gestion-instructor" options="-parameters" />
+      <module name="ms-gestion-taller" options="-parameters" />
+      <module name="ms-herramientas" options="-parameters" />
+      <module name="ms-melamine" options="-parameters" />
+      <module name="ms-ordenes" options="-parameters" />
+      <module name="ms-proveedores" options="-parameters" />
+      <module name="ms-proyectos" options="-parameters" />
+      <module name="service-registry" options="-parameters" />
+    </option>
+  </component>
+</project>
