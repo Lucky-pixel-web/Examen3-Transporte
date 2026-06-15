@@ -11,29 +11,21 @@
         <module name="config-server" />
         <module name="service-registry" />
       </profile>
-      <profile name="Annotation profile for auth-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="auth-service" />
-      </profile>
-      <profile name="Annotation profile for ms-gestion-alumno" enabled="true">
+      <profile name="Annotation profile for ms-gestion-taller" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
-        <module name="ms-gestion-alumno" />
-        <module name="ms-gestion-instructor" />
-        <module name="ms-gestion-taller" />
+        <module name="auth-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ms-estado" target="21" />
+      <module name="ms-gestion-alumno" target="21" />
+      <module name="ms-gestion-instructor" target="21" />
+      <module name="ms-gestion-taller" target="21" />
       <module name="ms-herramientas" target="21" />
       <module name="ms-melamine" target="21" />
       <module name="ms-ordenes" target="21" />

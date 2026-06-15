@@ -1,9 +1,0 @@
-server:
-  port: 8081
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3307/db_gestion_instructor_dev?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: mysql123
-  jpa:
-    show-sql: true
