@@ -1,4 +1,4 @@
-package pe.edu.upeu.ms_reserva;
+package pe.edu.upeu.msreserva;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
