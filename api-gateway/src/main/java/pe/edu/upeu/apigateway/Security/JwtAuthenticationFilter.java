@@ -41,22 +41,16 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
             String method = exchange.getRequest().getMethod().name();
 
             if ("USER".equals(rol)) {
-
                 if (method.equals("POST") || method.equals("PUT") || method.equals("DELETE")) {
                     return respuestaForbidden(exchange);
                 }
-
                 if (method.equals("GET") && path.matches(".*/\\d+$")) {
                     return respuestaForbidden(exchange);
                 }
-
                 if (method.equals("GET") && (
                         path.contains("/buscar") ||
                                 path.contains("/dni/") ||
-                                path.contains("/apellido/") ||
-                                path.contains("/categoria/") ||
-                                path.contains("/nombre/") ||
-                                path.contains("/resiliencia-test"))) {
+                                path.contains("/nombre/"))) {
                     return respuestaForbidden(exchange);
                 }
             }
@@ -75,7 +69,7 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
     private Mono<Void> respuestaForbidden(ServerWebExchange exchange) {
         exchange.getResponse().setStatusCode(HttpStatus.FORBIDDEN);
         exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
-        String body = "{\"error\":\"Acceso denegado\",\"mensaje\":\"No tiene permisos para realizar esta operación. Solo el ADMIN puede ejecutar esta acción.\"}";
+        String body = "{\"error\":\"Acceso denegado\",\"mensaje\":\"No tiene permisos para realizar esta operación.\"}";
         DataBuffer buffer = exchange.getResponse().bufferFactory().wrap(body.getBytes());
         return exchange.getResponse().writeWith(Mono.just(buffer));
     }
