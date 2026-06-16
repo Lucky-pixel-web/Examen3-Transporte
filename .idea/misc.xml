@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/ms-gestion-alumno/pom.xml" />
         <option value="$PROJECT_DIR$/ms-gestion-instructor/pom.xml" />
         <option value="$PROJECT_DIR$/ms-gestion-taller/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-reserva/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

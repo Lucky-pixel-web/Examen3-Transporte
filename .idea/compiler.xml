@@ -11,13 +11,14 @@
         <module name="config-server" />
         <module name="service-registry" />
       </profile>
-      <profile name="Annotation profile for ms-gestion-taller" enabled="true">
+      <profile name="Annotation profile for ms-reserva" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
+        <module name="ms-reserva" />
         <module name="auth-service" />
       </profile>
     </annotationProcessing>
@@ -47,6 +48,7 @@
       <module name="ms-ordenes" options="-parameters" />
       <module name="ms-proveedores" options="-parameters" />
       <module name="ms-proyectos" options="-parameters" />
+      <module name="ms-reserva" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>
   </component>
